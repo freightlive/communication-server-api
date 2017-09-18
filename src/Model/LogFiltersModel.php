@@ -66,7 +66,8 @@ class LogFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'updated_at' => '\DateTime',
+        'type_name' => 'string[]'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class LogFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'updated_at' => 'updated_at',
+        'type_name' => 'type_name'
     ];
 
 
@@ -88,7 +90,8 @@ class LogFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'updated_at' => 'setUpdatedAt',
+        'type_name' => 'setTypeName'
     ];
 
 
@@ -97,7 +100,8 @@ class LogFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'updated_at' => 'getUpdatedAt',
+        'type_name' => 'getTypeName'
     ];
 
     public static function attributeMap()
@@ -131,6 +135,8 @@ class LogFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
     }
 
     /**
@@ -155,6 +161,48 @@ class LogFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at Show updated since
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets type_name
+     * @return string[]
+     */
+    public function getTypeName()
+    {
+        return $this->container['type_name'];
+    }
+
+    /**
+     * Sets type_name
+     * @param string[] $type_name Array with type names
+     * @return $this
+     */
+    public function setTypeName($type_name)
+    {
+        $this->container['type_name'] = $type_name;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

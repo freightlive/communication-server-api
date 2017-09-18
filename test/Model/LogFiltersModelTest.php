@@ -95,4 +95,20 @@ class LogFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "type_name"
+     */
+    public function testPropertyTypeName()
+    {
+
+    }
+
 }
