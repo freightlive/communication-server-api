@@ -69,7 +69,11 @@ class LogRetrieveListArguments implements ArrayAccess
         'options' => '\BumbalCommunicationServer\Model\LogOptionsModel',
         'filters' => '\BumbalCommunicationServer\Model\LogFiltersModel',
         'limit' => 'int',
-        'offset' => 'int'
+        'offset' => 'int',
+        'sorting_column' => 'string',
+        'sorting_direction' => 'string',
+        'search_text' => 'string',
+        'as_list' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -85,7 +89,11 @@ class LogRetrieveListArguments implements ArrayAccess
         'options' => 'options',
         'filters' => 'filters',
         'limit' => 'limit',
-        'offset' => 'offset'
+        'offset' => 'offset',
+        'sorting_column' => 'sorting_column',
+        'sorting_direction' => 'sorting_direction',
+        'search_text' => 'search_text',
+        'as_list' => 'as_list'
     ];
 
 
@@ -97,7 +105,11 @@ class LogRetrieveListArguments implements ArrayAccess
         'options' => 'setOptions',
         'filters' => 'setFilters',
         'limit' => 'setLimit',
-        'offset' => 'setOffset'
+        'offset' => 'setOffset',
+        'sorting_column' => 'setSortingColumn',
+        'sorting_direction' => 'setSortingDirection',
+        'search_text' => 'setSearchText',
+        'as_list' => 'setAsList'
     ];
 
 
@@ -109,7 +121,11 @@ class LogRetrieveListArguments implements ArrayAccess
         'options' => 'getOptions',
         'filters' => 'getFilters',
         'limit' => 'getLimit',
-        'offset' => 'getOffset'
+        'offset' => 'getOffset',
+        'sorting_column' => 'getSortingColumn',
+        'sorting_direction' => 'getSortingDirection',
+        'search_text' => 'getSearchText',
+        'as_list' => 'getAsList'
     ];
 
     public static function attributeMap()
@@ -127,8 +143,22 @@ class LogRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingDirectionAllowableValues()
+    {
+        return [
+            self::SORTING_DIRECTION_ASC,
+            self::SORTING_DIRECTION_DESC,
+        ];
+    }
     
 
     /**
@@ -147,6 +177,10 @@ class LogRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
+        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
 
     /**
@@ -157,6 +191,11 @@ class LogRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+        $allowed_values = ["asc", "desc"];
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'sorting_direction', must be one of 'asc', 'desc'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -168,6 +207,10 @@ class LogRetrieveListArguments implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = ["asc", "desc"];
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -252,6 +295,94 @@ class LogRetrieveListArguments implements ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_column
+     * @return string
+     */
+    public function getSortingColumn()
+    {
+        return $this->container['sorting_column'];
+    }
+
+    /**
+     * Sets sorting_column
+     * @param string $sorting_column Sorting Column
+     * @return $this
+     */
+    public function setSortingColumn($sorting_column)
+    {
+        $this->container['sorting_column'] = $sorting_column;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_direction
+     * @return string
+     */
+    public function getSortingDirection()
+    {
+        return $this->container['sorting_direction'];
+    }
+
+    /**
+     * Sets sorting_direction
+     * @param string $sorting_direction Sorting Direction
+     * @return $this
+     */
+    public function setSortingDirection($sorting_direction)
+    {
+        $allowed_values = array('asc', 'desc');
+        if (!is_null($sorting_direction) && (!in_array($sorting_direction, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'sorting_direction', must be one of 'asc', 'desc'");
+        }
+        $this->container['sorting_direction'] = $sorting_direction;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_text
+     * @return string
+     */
+    public function getSearchText()
+    {
+        return $this->container['search_text'];
+    }
+
+    /**
+     * Sets search_text
+     * @param string $search_text
+     * @return $this
+     */
+    public function setSearchText($search_text)
+    {
+        $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
 
         return $this;
     }

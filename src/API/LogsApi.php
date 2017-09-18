@@ -108,7 +108,7 @@ class LogsApi
      *
      * @param \BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\Model\LogModel[]
+     * @return \BumbalCommunicationServer\Model\LogListResponse
      */
     public function retrieveListLog($arguments)
     {
@@ -123,7 +123,7 @@ class LogsApi
      *
      * @param \BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\Model\LogModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\LogListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListLogWithHttpInfo($arguments)
     {
@@ -171,15 +171,15 @@ class LogsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\Model\LogModel[]',
+                '\BumbalCommunicationServer\Model\LogListResponse',
                 '/log'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\LogModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\LogListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\LogModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\LogListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

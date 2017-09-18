@@ -1,6 +1,6 @@
 <?php
 /**
- * LogRetrieveListArgumentsTest
+ * LogListResponseTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalCommunicationServer;
 
 /**
- * LogRetrieveListArgumentsTest Class Doc Comment
+ * LogListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description LogRetrieveListArguments
+// * @description LogListResponse
 /**
  * @package     BumbalCommunicationServer
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LogRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class LogListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,73 +88,41 @@ class LogRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LogRetrieveListArguments"
+     * Test "LogListResponse"
      */
-    public function testLogRetrieveListArguments()
+    public function testLogListResponse()
     {
 
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "items"
      */
-    public function testPropertyOptions()
+    public function testPropertyItems()
     {
 
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyFilters()
+    public function testPropertyCountFiltered()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyLimit()
+    public function testPropertyCountUnfiltered()
     {
 
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "count_limited"
      */
-    public function testPropertyOffset()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
-    {
-
-    }
-
-    /**
-     * Test attribute "as_list"
-     */
-    public function testPropertyAsList()
+    public function testPropertyCountLimited()
     {
 
     }

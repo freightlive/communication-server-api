@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListLog**
-> \BumbalCommunicationServer\Model\LogModel[] retrieveListLog($arguments)
+> \BumbalCommunicationServer\Model\LogListResponse retrieveListLog($arguments)
 
 Retrieve List of Activities
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\LogModel[]**](../Model/LogModel.md)
+[**\BumbalCommunicationServer\Model\LogListResponse**](../Model/LogListResponse.md)
 
 ### Authorization
 

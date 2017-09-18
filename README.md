@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
  - [InstanceOptionsModel](docs/Model/InstanceOptionsModel.md)
  - [InstanceRetrieveListArguments](docs/Model/InstanceRetrieveListArguments.md)
  - [LogFiltersModel](docs/Model/LogFiltersModel.md)
+ - [LogListResponse](docs/Model/LogListResponse.md)
  - [LogModel](docs/Model/LogModel.md)
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
