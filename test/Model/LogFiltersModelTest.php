@@ -104,9 +104,9 @@ class LogFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type_name"
+     * Test attribute "type_id"
      */
-    public function testPropertyTypeName()
+    public function testPropertyTypeId()
     {
 
     }

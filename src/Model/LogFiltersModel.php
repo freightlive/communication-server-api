@@ -67,7 +67,7 @@ class LogFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'updated_at' => '\DateTime',
-        'type_name' => 'string[]'
+        'type_id' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +81,7 @@ class LogFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'updated_at' => 'updated_at',
-        'type_name' => 'type_name'
+        'type_id' => 'type_id'
     ];
 
 
@@ -91,7 +91,7 @@ class LogFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'updated_at' => 'setUpdatedAt',
-        'type_name' => 'setTypeName'
+        'type_id' => 'setTypeId'
     ];
 
 
@@ -101,7 +101,7 @@ class LogFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'updated_at' => 'getUpdatedAt',
-        'type_name' => 'getTypeName'
+        'type_id' => 'getTypeId'
     ];
 
     public static function attributeMap()
@@ -136,7 +136,7 @@ class LogFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
+        $this->container['type_id'] = isset($data['type_id']) ? $data['type_id'] : null;
     }
 
     /**
@@ -184,22 +184,22 @@ class LogFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets type_name
-     * @return string[]
+     * Gets type_id
+     * @return int[]
      */
-    public function getTypeName()
+    public function getTypeId()
     {
-        return $this->container['type_name'];
+        return $this->container['type_id'];
     }
 
     /**
-     * Sets type_name
-     * @param string[] $type_name Array with type names
+     * Sets type_id
+     * @param int[] $type_id Array with type ids
      * @return $this
      */
-    public function setTypeName($type_name)
+    public function setTypeId($type_id)
     {
-        $this->container['type_name'] = $type_name;
+        $this->container['type_id'] = $type_id;
 
         return $this;
     }
