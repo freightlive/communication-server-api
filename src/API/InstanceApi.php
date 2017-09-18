@@ -385,7 +385,7 @@ class InstanceApi
      *
      * @param \BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\Model\InstanceModel[]
+     * @return \BumbalCommunicationServer\Model\InstanceListResponse
      */
     public function retrieveListInstance($arguments)
     {
@@ -400,7 +400,7 @@ class InstanceApi
      *
      * @param \BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\Model\InstanceModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\InstanceListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListInstanceWithHttpInfo($arguments)
     {
@@ -448,15 +448,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\Model\InstanceModel[]',
+                '\BumbalCommunicationServer\Model\InstanceListResponse',
                 '/instance'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\InstanceModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\InstanceListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\InstanceModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\InstanceListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

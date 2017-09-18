@@ -95,6 +95,7 @@ Class | Method | HTTP request | Description
 
  - [ApiResponse](docs/Model/ApiResponse.md)
  - [InstanceFiltersModel](docs/Model/InstanceFiltersModel.md)
+ - [InstanceListResponse](docs/Model/InstanceListResponse.md)
  - [InstanceModel](docs/Model/InstanceModel.md)
  - [InstanceOptionsModel](docs/Model/InstanceOptionsModel.md)
  - [InstanceRetrieveListArguments](docs/Model/InstanceRetrieveListArguments.md)

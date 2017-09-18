@@ -127,4 +127,12 @@ class InstanceModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "suppressed"
+     */
+    public function testPropertySuppressed()
+    {
+
+    }
+
 }

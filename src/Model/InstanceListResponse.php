@@ -1,6 +1,6 @@
 <?php
 /**
- * InstanceModel
+ * InstanceListResponse
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalCommunicationServer\Model;
 use \ArrayAccess;
 
 /**
- * InstanceModel Class Doc Comment
+ * InstanceListResponse Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,24 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InstanceModel implements ArrayAccess
+class InstanceListResponse implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'InstanceModel';
+    protected static $swaggerModelName = 'InstanceListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'domain_name' => 'string',
-        'api_key' => 'string',
-        'suppressed' => 'bool'
+        'items' => '\BumbalCommunicationServer\Model\InstanceModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -83,11 +82,10 @@ class InstanceModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'domain_name' => 'domain_name',
-        'api_key' => 'api_key',
-        'suppressed' => 'suppressed'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -96,11 +94,10 @@ class InstanceModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'domain_name' => 'setDomainName',
-        'api_key' => 'setApiKey',
-        'suppressed' => 'setSuppressed'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -109,11 +106,10 @@ class InstanceModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'domain_name' => 'getDomainName',
-        'api_key' => 'getApiKey',
-        'suppressed' => 'getSuppressed'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -147,11 +143,10 @@ class InstanceModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['domain_name'] = isset($data['domain_name']) ? $data['domain_name'] : null;
-        $this->container['api_key'] = isset($data['api_key']) ? $data['api_key'] : null;
-        $this->container['suppressed'] = isset($data['suppressed']) ? $data['suppressed'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -178,106 +173,85 @@ class InstanceModel implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets items
+     * @return \BumbalCommunicationServer\Model\InstanceModel[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     * @param \BumbalCommunicationServer\Model\InstanceModel[] $items
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_filtered
      * @return int
      */
-    public function getId()
+    public function getCountFiltered()
     {
-        return $this->container['id'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets id
-     * @param int $id Identifier
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setId($id)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['id'] = $id;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getName()
+    public function getCountUnfiltered()
     {
-        return $this->container['name'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets name
-     * @param string $name Name description of bumbal Instance
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setName($name)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['name'] = $name;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets domain_name
-     * @return string
+     * Gets count_limited
+     * @return int
      */
-    public function getDomainName()
+    public function getCountLimited()
     {
-        return $this->container['domain_name'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets domain_name
-     * @param string $domain_name (sub) Domain name of the bumbal instance
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setDomainName($domain_name)
+    public function setCountLimited($count_limited)
     {
-        $this->container['domain_name'] = $domain_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets api_key
-     * @return string
-     */
-    public function getApiKey()
-    {
-        return $this->container['api_key'];
-    }
-
-    /**
-     * Sets api_key
-     * @param string $api_key API Key in UUID format
-     * @return $this
-     */
-    public function setApiKey($api_key)
-    {
-        $this->container['api_key'] = $api_key;
-
-        return $this;
-    }
-
-    /**
-     * Gets suppressed
-     * @return bool
-     */
-    public function getSuppressed()
-    {
-        return $this->container['suppressed'];
-    }
-
-    /**
-     * Sets suppressed
-     * @param bool $suppressed Suppress all messages for this instance
-     * @return $this
-     */
-    public function setSuppressed($suppressed)
-    {
-        $this->container['suppressed'] = $suppressed;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

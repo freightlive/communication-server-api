@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListInstance**
-> \BumbalCommunicationServer\Model\InstanceModel[] retrieveListInstance($arguments)
+> \BumbalCommunicationServer\Model\InstanceListResponse retrieveListInstance($arguments)
 
 Retrieve List of Instances
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\InstanceModel[]**](../Model/InstanceModel.md)
+[**\BumbalCommunicationServer\Model\InstanceListResponse**](../Model/InstanceListResponse.md)
 
 ### Authorization
 
