@@ -119,4 +119,12 @@ class ApiResponseTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "additional_data"
+     */
+    public function testPropertyAdditionalData()
+    {
+
+    }
+
 }

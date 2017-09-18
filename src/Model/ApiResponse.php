@@ -68,7 +68,8 @@ class ApiResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'type' => 'string',
-        'message' => 'string'
+        'message' => 'string',
+        'additional_data' => 'object'
     ];
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class ApiResponse implements ArrayAccess
     protected static $attributeMap = [
         'code' => 'code',
         'type' => 'type',
-        'message' => 'message'
+        'message' => 'message',
+        'additional_data' => 'additional_data'
     ];
 
 
@@ -94,7 +96,8 @@ class ApiResponse implements ArrayAccess
     protected static $setters = [
         'code' => 'setCode',
         'type' => 'setType',
-        'message' => 'setMessage'
+        'message' => 'setMessage',
+        'additional_data' => 'setAdditionalData'
     ];
 
 
@@ -105,7 +108,8 @@ class ApiResponse implements ArrayAccess
     protected static $getters = [
         'code' => 'getCode',
         'type' => 'getType',
-        'message' => 'getMessage'
+        'message' => 'getMessage',
+        'additional_data' => 'getAdditionalData'
     ];
 
     public static function attributeMap()
@@ -142,6 +146,7 @@ class ApiResponse implements ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['additional_data'] = isset($data['additional_data']) ? $data['additional_data'] : null;
     }
 
     /**
@@ -226,6 +231,27 @@ class ApiResponse implements ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_data
+     * @return object
+     */
+    public function getAdditionalData()
+    {
+        return $this->container['additional_data'];
+    }
+
+    /**
+     * Sets additional_data
+     * @param object $additional_data
+     * @return $this
+     */
+    public function setAdditionalData($additional_data)
+    {
+        $this->container['additional_data'] = $additional_data;
 
         return $this;
     }
