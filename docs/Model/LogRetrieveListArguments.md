@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalCommunicationServer\Model\LogOptionsModel**](LogOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalCommunicationServer\Model\LogFiltersModel**](LogFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogOptionsModel**](LogOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogFiltersModel**](LogFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

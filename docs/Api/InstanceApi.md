@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createInstance**
-> \BumbalCommunicationServer\Model\ApiResponse createInstance($body, $generate_settings)
+> \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse createInstance($body, $generate_settings)
 
 Create a Instance
 
@@ -29,7 +29,7 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
-$body = new \BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\Model\InstanceModel | Instance object
+$body = new \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel | Instance object
 $generate_settings = true; // bool | Generate Settings for this new Instance
 
 try {
@@ -45,12 +45,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalCommunicationServer\Model\InstanceModel**](../Model/\BumbalCommunicationServer\Model\InstanceModel.md)| Instance object |
+ **body** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel**](../Model/InstanceModel.md)| Instance object |
  **generate_settings** | **bool**| Generate Settings for this new Instance |
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteInstance**
-> \BumbalCommunicationServer\Model\ApiResponse deleteInstance($instance_id)
+> \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse deleteInstance($instance_id)
 
 Delete a Instance
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveInstance**
-> \BumbalCommunicationServer\Model\InstanceModel retrieveInstance($instance_id)
+> \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel retrieveInstance($instance_id)
 
 Retrieve a Instance
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\InstanceModel**](../Model/InstanceModel.md)
+[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel**](../Model/InstanceModel.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListInstance**
-> \BumbalCommunicationServer\Model\InstanceListResponse retrieveListInstance($arguments)
+> \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse retrieveListInstance($arguments)
 
 Retrieve List of Instances
 
@@ -181,7 +181,7 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
-$arguments = new \BumbalCommunicationServer\Model\InstanceRetrieveListArguments(); // \BumbalCommunicationServer\Model\InstanceRetrieveListArguments | Instance RetrieveList Arguments
+$arguments = new \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceRetrieveListArguments(); // \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceRetrieveListArguments | Instance RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListInstance($arguments);
@@ -196,11 +196,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalCommunicationServer\Model\InstanceRetrieveListArguments**](../Model/\BumbalCommunicationServer\Model\InstanceRetrieveListArguments.md)| Instance RetrieveList Arguments |
+ **arguments** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceRetrieveListArguments**](../Model/InstanceRetrieveListArguments.md)| Instance RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\InstanceListResponse**](../Model/InstanceListResponse.md)
+[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse**](../Model/InstanceListResponse.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateInstance**
-> \BumbalCommunicationServer\Model\ApiResponse updateInstance($instance_id, $body)
+> \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse updateInstance($instance_id, $body)
 
 Update an Instance
 
@@ -232,7 +232,7 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
 $instance_id = 789; // int | ID of Instance to update
-$body = new \BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\Model\InstanceModel | Instance object that needs to be updated
+$body = new \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel | Instance object that needs to be updated
 
 try {
     $result = $api_instance->updateInstance($instance_id, $body);
@@ -248,11 +248,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instance_id** | **int**| ID of Instance to update |
- **body** | [**\BumbalCommunicationServer\Model\InstanceModel**](../Model/\BumbalCommunicationServer\Model\InstanceModel.md)| Instance object that needs to be updated | [optional]
+ **body** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel**](../Model/InstanceModel.md)| Instance object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

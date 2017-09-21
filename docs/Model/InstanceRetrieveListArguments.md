@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalCommunicationServer\Model\InstanceOptionsModel**](InstanceOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalCommunicationServer\Model\InstanceFiltersModel**](InstanceFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceOptionsModel**](InstanceOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceFiltersModel**](InstanceFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 
