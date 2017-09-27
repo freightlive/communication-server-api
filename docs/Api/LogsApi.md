@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListLog**
-> \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse retrieveListLog($arguments)
+> \BumbalCommunicationServer\Model\LogListResponse retrieveListLog($arguments)
 
 Retrieve List of Activities
 
@@ -27,7 +27,7 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\LogsApi();
-$arguments = new \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogRetrieveListArguments(); // \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogRetrieveListArguments | Log RetrieveList Arguments
+$arguments = new \BumbalCommunicationServer\Model\LogRetrieveListArguments(); // \BumbalCommunicationServer\Model\LogRetrieveListArguments | Log RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListLog($arguments);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogRetrieveListArguments**](../Model/LogRetrieveListArguments.md)| Log RetrieveList Arguments |
+ **arguments** | [**\BumbalCommunicationServer\Model\LogRetrieveListArguments**](../Model/LogRetrieveListArguments.md)| Log RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse**](../Model/LogListResponse.md)
+[**\BumbalCommunicationServer\Model\LogListResponse**](../Model/LogListResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveLog**
-> \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel retrieveLog($log_id, $include_additional_data)
+> \BumbalCommunicationServer\Model\LogModel retrieveLog($log_id, $include_additional_data)
 
 Retrieve a log entry
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel**](../Model/LogModel.md)
+[**\BumbalCommunicationServer\Model\LogModel**](../Model/LogModel.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **truncateLog**
-> \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse truncateLog()
+> \BumbalCommunicationServer\Model\ApiResponse truncateLog()
 
 Truncate Log Table
 
@@ -144,7 +144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

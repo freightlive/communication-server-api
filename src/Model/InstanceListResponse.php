@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\Model;
+namespace BumbalCommunicationServer\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class InstanceListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel[]',
+        'items' => '\BumbalCommunicationServer\Model\InstanceModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class InstanceListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel[]
+     * @return \BumbalCommunicationServer\Model\InstanceModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class InstanceListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel[] $items
+     * @param \BumbalCommunicationServer\Model\InstanceModel[] $items
      * @return $this
      */
     public function setItems($items)

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\Model;
+namespace BumbalCommunicationServer\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class LogRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogOptionsModel',
-        'filters' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogFiltersModel',
+        'options' => '\BumbalCommunicationServer\Model\LogOptionsModel',
+        'filters' => '\BumbalCommunicationServer\Model\LogFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -230,7 +230,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogOptionsModel
+     * @return \BumbalCommunicationServer\Model\LogOptionsModel
      */
     public function getOptions()
     {
@@ -239,7 +239,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogOptionsModel $options
+     * @param \BumbalCommunicationServer\Model\LogOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -251,7 +251,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogFiltersModel
+     * @return \BumbalCommunicationServer\Model\LogFiltersModel
      */
     public function getFilters()
     {
@@ -260,7 +260,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogFiltersModel $filters
+     * @param \BumbalCommunicationServer\Model\LogFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

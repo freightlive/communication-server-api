@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\API;
+namespace BumbalCommunicationServer\API;
 
 use \BumbalCommunicationServer\ApiClient;
 use \BumbalCommunicationServer\ApiException;
@@ -92,10 +92,10 @@ class InstanceApi
      *
      * Create a Instance
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel $body Instance object (required)
+     * @param \BumbalCommunicationServer\Model\InstanceModel $body Instance object (required)
      * @param bool $generate_settings Generate Settings for this new Instance (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse
+     * @return \BumbalCommunicationServer\Model\ApiResponse
      */
     public function createInstance($body, $generate_settings)
     {
@@ -108,10 +108,10 @@ class InstanceApi
      *
      * Create a Instance
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel $body Instance object (required)
+     * @param \BumbalCommunicationServer\Model\InstanceModel $body Instance object (required)
      * @param bool $generate_settings Generate Settings for this new Instance (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInstanceWithHttpInfo($body, $generate_settings)
     {
@@ -164,15 +164,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse',
+                '\BumbalCommunicationServer\Model\ApiResponse',
                 '/instance'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -188,7 +188,7 @@ class InstanceApi
      *
      * @param int $instance_id ID of the instance to delete (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse
+     * @return \BumbalCommunicationServer\Model\ApiResponse
      */
     public function deleteInstance($instance_id)
     {
@@ -203,7 +203,7 @@ class InstanceApi
      *
      * @param int $instance_id ID of the instance to delete (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteInstanceWithHttpInfo($instance_id)
     {
@@ -251,15 +251,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse',
+                '\BumbalCommunicationServer\Model\ApiResponse',
                 '/instance/{instanceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -275,7 +275,7 @@ class InstanceApi
      *
      * @param int $instance_id ID of instance to return (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel
+     * @return \BumbalCommunicationServer\Model\InstanceModel
      */
     public function retrieveInstance($instance_id)
     {
@@ -290,7 +290,7 @@ class InstanceApi
      *
      * @param int $instance_id ID of instance to return (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\InstanceModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveInstanceWithHttpInfo($instance_id)
     {
@@ -338,15 +338,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel',
+                '\BumbalCommunicationServer\Model\InstanceModel',
                 '/instance/{instanceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\InstanceModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\InstanceModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -360,9 +360,9 @@ class InstanceApi
      *
      * Retrieve List of Instances
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
+     * @param \BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse
+     * @return \BumbalCommunicationServer\Model\InstanceListResponse
      */
     public function retrieveListInstance($arguments)
     {
@@ -375,9 +375,9 @@ class InstanceApi
      *
      * Retrieve List of Instances
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
+     * @param \BumbalCommunicationServer\Model\InstanceRetrieveListArguments $arguments Instance RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\InstanceListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListInstanceWithHttpInfo($arguments)
     {
@@ -422,15 +422,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse',
+                '\BumbalCommunicationServer\Model\InstanceListResponse',
                 '/instance'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\InstanceListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\InstanceListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -445,9 +445,9 @@ class InstanceApi
      * Update an Instance
      *
      * @param int $instance_id ID of Instance to update (required)
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel $body Instance object that needs to be updated (optional)
+     * @param \BumbalCommunicationServer\Model\InstanceModel $body Instance object that needs to be updated (optional)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse
+     * @return \BumbalCommunicationServer\Model\ApiResponse
      */
     public function updateInstance($instance_id, $body = null)
     {
@@ -461,9 +461,9 @@ class InstanceApi
      * Update an Instance
      *
      * @param int $instance_id ID of Instance to update (required)
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel $body Instance object that needs to be updated (optional)
+     * @param \BumbalCommunicationServer\Model\InstanceModel $body Instance object that needs to be updated (optional)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateInstanceWithHttpInfo($instance_id, $body = null)
     {
@@ -516,15 +516,15 @@ class InstanceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse',
+                '\BumbalCommunicationServer\Model\ApiResponse',
                 '/instance/{instanceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

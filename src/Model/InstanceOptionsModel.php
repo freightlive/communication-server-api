@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\Model;
+namespace BumbalCommunicationServer\Model;
 
 use \ArrayAccess;
 

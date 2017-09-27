@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\API;
+namespace BumbalCommunicationServer\API;
 
 use \BumbalCommunicationServer\ApiClient;
 use \BumbalCommunicationServer\ApiException;
@@ -92,9 +92,9 @@ class LogsApi
      *
      * Retrieve List of Activities
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
+     * @param \BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse
+     * @return \BumbalCommunicationServer\Model\LogListResponse
      */
     public function retrieveListLog($arguments)
     {
@@ -107,9 +107,9 @@ class LogsApi
      *
      * Retrieve List of Activities
      *
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
+     * @param \BumbalCommunicationServer\Model\LogRetrieveListArguments $arguments Log RetrieveList Arguments (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\LogListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListLogWithHttpInfo($arguments)
     {
@@ -154,15 +154,15 @@ class LogsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse',
+                '\BumbalCommunicationServer\Model\LogListResponse',
                 '/log'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\LogListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\LogListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,7 +179,7 @@ class LogsApi
      * @param int $log_id ID of log id to return (required)
      * @param bool $include_additional_data Show the text value of the status (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel
+     * @return \BumbalCommunicationServer\Model\LogModel
      */
     public function retrieveLog($log_id, $include_additional_data)
     {
@@ -195,7 +195,7 @@ class LogsApi
      * @param int $log_id ID of log id to return (required)
      * @param bool $include_additional_data Show the text value of the status (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\LogModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveLogWithHttpInfo($log_id, $include_additional_data)
     {
@@ -251,15 +251,15 @@ class LogsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel',
+                '\BumbalCommunicationServer\Model\LogModel',
                 '/log/{logId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\LogModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\LogModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -274,7 +274,7 @@ class LogsApi
      * Truncate Log Table
      *
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse
+     * @return \BumbalCommunicationServer\Model\ApiResponse
      */
     public function truncateLog()
     {
@@ -288,7 +288,7 @@ class LogsApi
      * Truncate Log Table
      *
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
-     * @return array of \BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function truncateLogWithHttpInfo()
     {
@@ -324,15 +324,15 @@ class LogsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse',
+                '\BumbalCommunicationServer\Model\ApiResponse',
                 '/log/truncate'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -62,7 +62,7 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
-$body = new \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceModel | Instance object
+$body = new \BumbalCommunicationServer\Model\InstanceModel(); // \BumbalCommunicationServer\Model\InstanceModel | Instance object
 $generate_settings = true; // bool | Generate Settings for this new Instance
 
 try {

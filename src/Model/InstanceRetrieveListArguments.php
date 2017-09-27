@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\Model;
+namespace BumbalCommunicationServer\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class InstanceRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceOptionsModel',
-        'filters' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceFiltersModel',
+        'options' => '\BumbalCommunicationServer\Model\InstanceOptionsModel',
+        'filters' => '\BumbalCommunicationServer\Model\InstanceFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -230,7 +230,7 @@ class InstanceRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceOptionsModel
+     * @return \BumbalCommunicationServer\Model\InstanceOptionsModel
      */
     public function getOptions()
     {
@@ -239,7 +239,7 @@ class InstanceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceOptionsModel $options
+     * @param \BumbalCommunicationServer\Model\InstanceOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -251,7 +251,7 @@ class InstanceRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceFiltersModel
+     * @return \BumbalCommunicationServer\Model\InstanceFiltersModel
      */
     public function getFilters()
     {
@@ -260,7 +260,7 @@ class InstanceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\InstanceFiltersModel $filters
+     * @param \BumbalCommunicationServer\Model\InstanceFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

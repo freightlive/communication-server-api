@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalCommunicationServer\BumbalCommunicationServer\Model;
+namespace BumbalCommunicationServer\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class LogListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel[]',
+        'items' => '\BumbalCommunicationServer\Model\LogModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class LogListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel[]
+     * @return \BumbalCommunicationServer\Model\LogModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class LogListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalCommunicationServer\BumbalCommunicationServer\Model\LogModel[] $items
+     * @param \BumbalCommunicationServer\Model\LogModel[] $items
      * @return $this
      */
     public function setItems($items)
