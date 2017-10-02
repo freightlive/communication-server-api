@@ -93,6 +93,16 @@ class InstanceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for purgeInstance
+     *
+     * Purge data for an Instance.
+     *
+     */
+    public function testPurgeInstance()
+    {
+    }
+
+    /**
      * Test case for retrieveInstance
      *
      * Retrieve a Instance.

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createInstance**](InstanceApi.md#createInstance) | **POST** /instance | Create a Instance
 [**deleteInstance**](InstanceApi.md#deleteInstance) | **DELETE** /instance/{instanceId} | Delete a Instance
+[**purgeInstance**](InstanceApi.md#purgeInstance) | **GET** /instance/purge/{instanceId} | Purge data for an Instance
 [**retrieveInstance**](InstanceApi.md#retrieveInstance) | **GET** /instance/{instanceId} | Retrieve a Instance
 [**retrieveListInstance**](InstanceApi.md#retrieveListInstance) | **PUT** /instance | Retrieve List of Instances
 [**updateInstance**](InstanceApi.md#updateInstance) | **PUT** /instance/{instanceId} | Update an Instance
@@ -97,6 +98,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instance_id** | **int**| ID of the instance to delete |
+
+### Return type
+
+[**\BumbalCommunicationServer\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **purgeInstance**
+> \BumbalCommunicationServer\Model\ApiResponse purgeInstance($instance_id)
+
+Purge data for an Instance
+
+Purge data for an Instance
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalCommunicationServer\Api\InstanceApi();
+$instance_id = 789; // int | ID of the instance to purge
+
+try {
+    $result = $api_instance->purgeInstance($instance_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling InstanceApi->purgeInstance: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instance_id** | **int**| ID of the instance to purge |
 
 ### Return type
 
