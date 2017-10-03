@@ -186,13 +186,13 @@ class InstanceApi
      *
      * Delete a Instance
      *
-     * @param int $instance_id ID of the instance to delete (required)
+     * @param int $id ID of the instance to delete (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
      * @return \BumbalCommunicationServer\Model\ApiResponse
      */
-    public function deleteInstance($instance_id)
+    public function deleteInstance($id)
     {
-        list($response) = $this->deleteInstanceWithHttpInfo($instance_id);
+        list($response) = $this->deleteInstanceWithHttpInfo($id);
         return $response;
     }
 
@@ -201,18 +201,18 @@ class InstanceApi
      *
      * Delete a Instance
      *
-     * @param int $instance_id ID of the instance to delete (required)
+     * @param int $id ID of the instance to delete (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
      * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteInstanceWithHttpInfo($instance_id)
+    public function deleteInstanceWithHttpInfo($id)
     {
-        // verify the required parameter 'instance_id' is set
-        if ($instance_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $instance_id when calling deleteInstance');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling deleteInstance');
         }
         // parse inputs
-        $resourcePath = "/instance/{instanceId}";
+        $resourcePath = "/instance/{id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -224,10 +224,10 @@ class InstanceApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($instance_id !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                "{" . "instanceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($instance_id),
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
                 $resourcePath
             );
         }
@@ -252,7 +252,7 @@ class InstanceApi
                 $httpBody,
                 $headerParams,
                 '\BumbalCommunicationServer\Model\ApiResponse',
-                '/instance/{instanceId}'
+                '/instance/{id}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

@@ -5,7 +5,7 @@ All URIs are relative to *https://communication.bumbal.eu/server/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createInstance**](InstanceApi.md#createInstance) | **POST** /instance | Create a Instance
-[**deleteInstance**](InstanceApi.md#deleteInstance) | **DELETE** /instance/{instanceId} | Delete a Instance
+[**deleteInstance**](InstanceApi.md#deleteInstance) | **DELETE** /instance/{id} | Delete a Instance
 [**purgeInstance**](InstanceApi.md#purgeInstance) | **GET** /instance/purge/{instanceId} | Purge data for an Instance
 [**retrieveInstance**](InstanceApi.md#retrieveInstance) | **GET** /instance/{instanceId} | Retrieve a Instance
 [**retrieveListInstance**](InstanceApi.md#retrieveListInstance) | **PUT** /instance | Retrieve List of Instances
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteInstance**
-> \BumbalCommunicationServer\Model\ApiResponse deleteInstance($instance_id)
+> \BumbalCommunicationServer\Model\ApiResponse deleteInstance($id)
 
 Delete a Instance
 
@@ -82,10 +82,10 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
-$instance_id = 789; // int | ID of the instance to delete
+$id = 789; // int | ID of the instance to delete
 
 try {
-    $result = $api_instance->deleteInstance($instance_id);
+    $result = $api_instance->deleteInstance($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InstanceApi->deleteInstance: ', $e->getMessage(), PHP_EOL;
@@ -97,7 +97,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **instance_id** | **int**| ID of the instance to delete |
+ **id** | **int**| ID of the instance to delete |
 
 ### Return type
 

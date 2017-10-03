@@ -82,7 +82,7 @@ All URIs are relative to *https://communication.bumbal.eu/server/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *InstanceApi* | [**createInstance**](docs/Api/InstanceApi.md#createinstance) | **POST** /instance | Create a Instance
-*InstanceApi* | [**deleteInstance**](docs/Api/InstanceApi.md#deleteinstance) | **DELETE** /instance/{instanceId} | Delete a Instance
+*InstanceApi* | [**deleteInstance**](docs/Api/InstanceApi.md#deleteinstance) | **DELETE** /instance/{id} | Delete a Instance
 *InstanceApi* | [**purgeInstance**](docs/Api/InstanceApi.md#purgeinstance) | **GET** /instance/purge/{instanceId} | Purge data for an Instance
 *InstanceApi* | [**retrieveInstance**](docs/Api/InstanceApi.md#retrieveinstance) | **GET** /instance/{instanceId} | Retrieve a Instance
 *InstanceApi* | [**retrieveListInstance**](docs/Api/InstanceApi.md#retrievelistinstance) | **PUT** /instance | Retrieve List of Instances
