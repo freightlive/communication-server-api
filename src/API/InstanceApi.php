@@ -356,6 +356,93 @@ class InstanceApi
     }
 
     /**
+     * Operation purgeInstanceByName
+     *
+     * Purge data for an Instance by instance Name
+     *
+     * @param int $instance_id ID of the instance to purge (required)
+     * @throws \BumbalCommunicationServer\ApiException on non-2xx response
+     * @return \BumbalCommunicationServer\Model\ApiResponse
+     */
+    public function purgeInstanceByName($instance_id)
+    {
+        list($response) = $this->purgeInstanceByNameWithHttpInfo($instance_id);
+        return $response;
+    }
+
+    /**
+     * Operation purgeInstanceByNameWithHttpInfo
+     *
+     * Purge data for an Instance by instance Name
+     *
+     * @param int $instance_id ID of the instance to purge (required)
+     * @throws \BumbalCommunicationServer\ApiException on non-2xx response
+     * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function purgeInstanceByNameWithHttpInfo($instance_id)
+    {
+        // verify the required parameter 'instance_id' is set
+        if ($instance_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $instance_id when calling purgeInstanceByName');
+        }
+        // parse inputs
+        $resourcePath = "/instance/purge-by-name/{instanceName}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($instance_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "instanceId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($instance_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalCommunicationServer\Model\ApiResponse',
+                '/instance/purge-by-name/{instanceName}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalCommunicationServer\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalCommunicationServer\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveInstance
      *
      * Retrieve a Instance
