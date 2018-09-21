@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **purgeInstanceByName**
-> \BumbalCommunicationServer\Model\ApiResponse purgeInstanceByName($instance_id)
+> \BumbalCommunicationServer\Model\ApiResponse purgeInstanceByName($instance_name)
 
 Purge data for an Instance by instance Name
 
@@ -183,10 +183,10 @@ BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKey('A
 // BumbalCommunicationServer\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalCommunicationServer\Api\InstanceApi();
-$instance_id = 789; // int | ID of the instance to purge
+$instance_name = "instance_name_example"; // string | Domain name of the instance to purge
 
 try {
-    $result = $api_instance->purgeInstanceByName($instance_id);
+    $result = $api_instance->purgeInstanceByName($instance_name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InstanceApi->purgeInstanceByName: ', $e->getMessage(), PHP_EOL;
@@ -198,7 +198,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **instance_id** | **int**| ID of the instance to purge |
+ **instance_name** | **string**| Domain name of the instance to purge |
 
 ### Return type
 

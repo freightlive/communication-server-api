@@ -360,13 +360,13 @@ class InstanceApi
      *
      * Purge data for an Instance by instance Name
      *
-     * @param int $instance_id ID of the instance to purge (required)
+     * @param string $instance_name Domain name of the instance to purge (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
      * @return \BumbalCommunicationServer\Model\ApiResponse
      */
-    public function purgeInstanceByName($instance_id)
+    public function purgeInstanceByName($instance_name)
     {
-        list($response) = $this->purgeInstanceByNameWithHttpInfo($instance_id);
+        list($response) = $this->purgeInstanceByNameWithHttpInfo($instance_name);
         return $response;
     }
 
@@ -375,15 +375,15 @@ class InstanceApi
      *
      * Purge data for an Instance by instance Name
      *
-     * @param int $instance_id ID of the instance to purge (required)
+     * @param string $instance_name Domain name of the instance to purge (required)
      * @throws \BumbalCommunicationServer\ApiException on non-2xx response
      * @return array of \BumbalCommunicationServer\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function purgeInstanceByNameWithHttpInfo($instance_id)
+    public function purgeInstanceByNameWithHttpInfo($instance_name)
     {
-        // verify the required parameter 'instance_id' is set
-        if ($instance_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $instance_id when calling purgeInstanceByName');
+        // verify the required parameter 'instance_name' is set
+        if ($instance_name === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $instance_name when calling purgeInstanceByName');
         }
         // parse inputs
         $resourcePath = "/instance/purge-by-name/{instanceName}";
@@ -398,10 +398,10 @@ class InstanceApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($instance_id !== null) {
+        if ($instance_name !== null) {
             $resourcePath = str_replace(
-                "{" . "instanceId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($instance_id),
+                "{" . "instanceName" . "}",
+                $this->apiClient->getSerializer()->toPathValue($instance_name),
                 $resourcePath
             );
         }
